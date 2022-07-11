@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0 1rem;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.app {
+     text-align: center;
+     
+}
+h2 {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: italic;
+    margin: 2rem 0 1rem 0;
+}
+p {
+    line-height: 1.4;
+    padding: 0 10rem;
+}
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    padding: 0 14px;
+}
+img {
+    width: 100%;
+}
+.pics {
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+    margin-bottom: 12px;
+}
+.pics:hover {
+    filter: opacity(.8);
+}
+@media screen and (max-width: 895px) {
+    .gallery {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+    p{
+        padding: 0;
+        font-size: smaller;
+    }
+}
+@media screen and (max-width: 480px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    p{
+        font-size: x-small;
+    }
+    h2 {
+        font-size: 16px;
+    }
+}
+.open-modal {
+    
+}
+.modal {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    justify-self: center;
+    border-radius: 0.7rem;
+    transition: visibility .4 ease transform .5s ease-in-out opacity 350ms ease-in;
+    visibility: hidden;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 9;
+}
+.modal img {
+   height: auto;
+   max-height: 100%;
+   width: auto;
+   max-width: 100%;
+   display: block;
+   line-height: 0;
+   padding: 20px 0 20px;
+   margin: 0 auto;
+   border-radius: .5rem;
+
+}
+.modal.open {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+}
+.modal span {
+    color: #fff;
+    font-family: cursive;
+    font-size: 1.6rem;
+    font-weight: 900;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+.modal span:hover {
+    background-color: #f70505;
+    border-radius: 16rem;
+}
