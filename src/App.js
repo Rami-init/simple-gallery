@@ -19,7 +19,7 @@ const App = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Sed delectus amet labore at dignissimos aliquam consequuntur, 
             deleniti recusandae natus praesentium, cupiditate 
-            voluptatum veritatis illum rerum ut voluptate enim optio fuga.
+            voluptatum veritatis illum rerum ut voluptate enim optio fugat.
         </p>
         <div className='gallery'>
             {data.map((item)=>{
